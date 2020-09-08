@@ -1,46 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Pricing Component with toggle</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Pricing Component with toggle</title>
+    <link rel="stylesheet" href="css/style.scss">
+  </head>
 
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">Our Pricing</h1>
 
-  Our Pricing
-  Annually
-  Monthly
+      <div class="toggle-container">
+        <span>Annually</span>
+        <span>
+          <label class="track" for="toggle">
+            <input type="checkbox" name="toggle" id="toggle" checked />
+            <div class="thumb"></div>
+          </label>
+        </span>
+        <span>Monthly</span>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-header">
+            <h5>Basic</h5>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>500 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send up to 3 GB</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <button>Learn more</button>
+          </div>
+        </div>
+
+        <div class="card professional">
+          <div class="card-header">
+            <h5>Professional</h5>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>1 TB Storage</li>
+              <li>5 Users Allowed</li>
+              <li>Send up to 10 GB</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <button>Learn More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5>Master</h5>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li> 2 TB Storage</li>
+              <li>10 Users Allowed</li>
+              <li>Send up to 20 GB</li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <button>Learn More</button>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
 
   Basic
   &dollar;19.99
   &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
 
   Professional
   &dollar;24.99
   &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
 
   Master
   &dollar;39.99
   &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
