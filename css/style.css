@@ -103,9 +103,10 @@ input:checked + .thumb:before {
 
 .cards {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     color: var(--grayishBlue);
-    margin-bottom: 40px;
-    justify-content: center;
+    /*margin-bottom: 40px;*/
 }
 
 .cards .card {
@@ -117,17 +118,24 @@ input:checked + .thumb:before {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card-footer button {
+.card-body button {
     width: 100%;
     border: none;
     color: #FFF;
     outline: none;
     padding: 10px;
+    margin-top: 15px;
     cursor: pointer;
     border-radius: 5px;
     letter-spacing: 2px;
     text-transform: uppercase;
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.card-body button:hover{
+    color: var(--secondary);
+    border: 1px solid var(--darkGrayishBlue);
+    background: transparent;
 }
 
 .card:first-child {
@@ -138,23 +146,46 @@ input:checked + .thumb:before {
     border-radius: 0 10px 10px 0;
 }
 
-.card.professional {
+.professional {
     color: #FFF;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
     border-radius: 12px;
     box-shadow: none;
-    transform: scaleY(1.2);
+    /*transform: scaleY(1.2);*/
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
 }
 
-.card.professional button {
+.professional .card-body button {
     color: var(--secondary);
     background-image: none;
-    background-color: #FFF !important;
+    background-color: #FFF;
+}
+
+.professional .card-body button:hover{
+    color: #FFF;
+    border: 1px solid white;
+    background: transparent;
 }
 
 .card h5 {
     margin-top: 5px;
+}
+
+.card .price {
+    margin: 20px 0;
+    color: var(--darkGrayishBlue)
+}
+
+.card.professional .price span {
+    color: #FFF;
+}
+
+.card .price p span.currency {
+    font-size: 18px;
+}
+
+.card .price p span.amount {
+    font-size: 32px;
 }
 
 .card .card-body ul {
